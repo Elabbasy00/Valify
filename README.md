@@ -30,6 +30,9 @@ It also creates a record in the database containing the symmetric encryption key
 ├── server
 │   ├── asgi.py
 │   ├── settings
+|   |   |__ base.py # shared settings
+|   |   |__ dev.py # development settings
+|   |   |__ dev.py # production settings
 │   ├── urls.py
 │   └── wsgi.py
 ├── users
