@@ -1,0 +1,1476 @@
+{
+	"info": {
+		"_postman_id": "2d59a1cb-4ba3-4fab-beaa-af8c3f6873db",
+		"name": "Valify",
+		"description": "Backend Task Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14095999",
+		"_collection_link": "https://bold-equinox-728712.postman.co/workspace/My-Workspace~1aa327bf-0fd8-498d-8aa2-9e18ef1de452/collection/14095999-2d59a1cb-4ba3-4fab-beaa-af8c3f6873db?action=share&source=collection_link&creator=14095999"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ahmed\",\n    \"email\": \"ahmed@gmail.com\",\n    \"password\": \"010202020aA\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}user/register/",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"register",
+								""
+							]
+						},
+						"description": "Create User\n\nShow exmples"
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ahmed\",\n    \"email\": \"ahmed@gmail.com\",\n    \"password\": \"010202020aA\"    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/user/register/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 03:53:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1750"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "a6b3418aae75498ba2f61606f7540eef"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=192.35299999999978;desc=\"User CPU time\", TimerPanel_stime;dur=36.52000000000033;desc=\"System CPU time\", TimerPanel_total;dur=228.8730000000001;desc=\"Total CPU time\", TimerPanel_total_time;dur=216.4596660004463;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.884293000737671;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}"
+						},
+						{
+							"name": "400 bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"\",\n    \"email\": \"\",\n    \"password\": \"\"    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}user/register/",
+									"host": [
+										"{{base_url}}user"
+									],
+									"path": [
+										"register",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 04:04:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "75102673d38f4cdba9e542cb605cb12d"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=10.587000000001012;desc=\"User CPU time\", TimerPanel_stime;dur=11.72899999999899;desc=\"System CPU time\", TimerPanel_total;dur=22.316000000000003;desc=\"Total CPU time\", TimerPanel_total_time;dur=33.14804099500179;desc=\"Elapsed time\", SQLPanel_sql_time;dur=2.230666999821551;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": [\n        \"This field may not be blank.\"\n    ],\n    \"email\": [\n        \"This field may not be blank.\"\n    ],\n    \"password\": [\n        \"This field may not be blank.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ahmed@gmail.com\",\n    \"password\": \"010202020aA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}user/login/",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"ahmed@gmail.com\",\n    \"password\": \"010202020aA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/user/login/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 04:10:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "9b945520f8a345e4bd861506c8412e00"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=123.85300000000043;desc=\"User CPU time\", TimerPanel_stime;dur=20.492000000000843;desc=\"System CPU time\", TimerPanel_total;dur=144.34500000000128;desc=\"Total CPU time\", TimerPanel_total_time;dur=136.22445900546154;desc=\"Elapsed time\", SQLPanel_sql_time;dur=4.373957002826501;desc=\"SQL 9 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "csrftoken=cDBKcEJbwI7wBxdHrywW8Ws1mrd9eDUw; expires=Wed, 16 Oct 2024 04:10:04 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=qh65gg48igtofm5l9tk7cmr1qpwegtkg; expires=Wed, 01 Nov 2023 04:10:04 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 16\n}"
+						}
+					]
+				},
+				{
+					"name": "User Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}user/detail",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/user/detail",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 04:12:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "bb03a650ec6d4973b361b93a2097453e"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=8.968000000002974;desc=\"User CPU time\", TimerPanel_stime;dur=4.204999999998904;desc=\"System CPU time\", TimerPanel_total;dur=13.173000000001878;desc=\"Total CPU time\", TimerPanel_total_time;dur=16.252207999059465;desc=\"Elapsed time\", SQLPanel_sql_time;dur=0.5111659993417561;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"username\": \"ahmed\",\n    \"email\": \"ahmed@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}user/logout/",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Provide a authentication ways"
+		},
+		{
+			"name": "Encryption",
+			"item": [
+				{
+					"name": "Create Secret",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Credit Card\",\n    \"text\": \"01387461613535163\",\n    \"recipients\": [13, 14]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}secret/create/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"\",\n    \"text\": \"\",\n    \"recipients\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/create/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:00:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "80f1d78d61d642de96d46caba60fb964"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=10.079999999999977;desc=\"User CPU time\", TimerPanel_stime;dur=7.54100000000002;desc=\"System CPU time\", TimerPanel_total;dur=17.620999999999995;desc=\"Total CPU time\", TimerPanel_total_time;dur=21.32379200338619;desc=\"Elapsed time\", SQLPanel_sql_time;dur=2.2393749895854853;desc=\"SQL 2 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"name must be set\"\n}"
+						},
+						{
+							"name": "Invalid Public Key",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Credit Card\",\n    \"text\": \"01387461613535163\",\n    \"recipients\": [2, 3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/create/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:01:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "256b1b99348b4be69f31622a1a3ba864"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=37.15100000000015;desc=\"User CPU time\", TimerPanel_stime;dur=20.699000000000023;desc=\"System CPU time\", TimerPanel_total;dur=57.85000000000018;desc=\"Total CPU time\", TimerPanel_total_time;dur=86.06329200119944;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.1170830043265596;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"el has an invalid public Key\"\n}"
+						},
+						{
+							"name": "recipients dons't exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Credit Card\",\n    \"text\": \"01387461613535163\",\n    \"recipients\": [3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/create/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:02:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "2ec7f624b48846cea424de103ec612f9"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=18.72499999999988;desc=\"User CPU time\", TimerPanel_stime;dur=12.59599999999983;desc=\"System CPU time\", TimerPanel_total;dur=31.32099999999971;desc=\"Total CPU time\", TimerPanel_total_time;dur=41.098374997091014;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.850375003821682;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Recipients doesn't exist\"\n}"
+						},
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Credit Card\",\n    \"text\": \"01387461613535163\",\n    \"recipients\": [13, 14]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/create/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:03:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "587"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "91d6456b9522445488cfd6a5ab2f9e64"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=37.61599999999987;desc=\"User CPU time\", TimerPanel_stime;dur=17.45399999999986;desc=\"System CPU time\", TimerPanel_total;dur=55.06999999999973;desc=\"Total CPU time\", TimerPanel_total_time;dur=75.61604200600414;desc=\"Elapsed time\", SQLPanel_sql_time;dur=4.899665997072589;desc=\"SQL 10 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 34,\n    \"shared_with\": [\n        {\n            \"username\": \"test\"\n        },\n        {\n            \"username\": \"test2\"\n        }\n    ],\n    \"name\": \"Credit Card\",\n    \"key\": \"V928KkvhqnfChmZojGjuUEkHL3g9s6jrMmlRVk7oddo+befOj8XgaxtFlTdnEFtCA1hK5tVQMJsLUc4GYOq6yJ3H8+YiaAg07MEvO1Us/dm2pfodCponzjsbUg1nXDMZHM9EyJQWdt75yPtBn54yaQ48TWhNj9j2F16oR+WzKtV/l2MX/cLzhRd7PKFSOy94NEck+oOM9GVyCRKHiRUxptQtw0bZEqE4Bo1IU0XOdFfk5M/G6IpLHvE5zNG55kj23vbG79mDx1lX8qGdSQ80LIjUwvLMKJe5SZb/e4bc8Gpw6bpqRpapsIP+L9UMgD4Krfcsv87dPz+hoTQl+RZcXg==\",\n    \"cipher_text\": \"gAAAAABlL2c_WUj0LWF0uPRQIHpcZR8XCjf86Lgs6JzkkJeJft4WOWzQLqbGD61LKIpYa6ty8FKQQmMWvyc99DvU6yEyGpw9MaQMYIZ0W2wLwC26xth5QZA=\",\n    \"user\": 16\n}"
+						}
+					]
+				},
+				{
+					"name": "Own Secret",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}secret/own_secrets/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"own_secrets",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}secret/own_secrets/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"own_secrets",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:07:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "589"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "6277a5c126ae469c9d4663e6d6ec4c8a"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=44.39500000000002;desc=\"User CPU time\", TimerPanel_stime;dur=25.07999999999999;desc=\"System CPU time\", TimerPanel_total;dur=69.47500000000001;desc=\"Total CPU time\", TimerPanel_total_time;dur=75.70908299385337;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.8091250021825545;desc=\"SQL 5 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 34,\n        \"shared_with\": [\n            {\n                \"username\": \"test\"\n            },\n            {\n                \"username\": \"test2\"\n            }\n        ],\n        \"name\": \"Credit Card\",\n        \"key\": \"V928KkvhqnfChmZojGjuUEkHL3g9s6jrMmlRVk7oddo+befOj8XgaxtFlTdnEFtCA1hK5tVQMJsLUc4GYOq6yJ3H8+YiaAg07MEvO1Us/dm2pfodCponzjsbUg1nXDMZHM9EyJQWdt75yPtBn54yaQ48TWhNj9j2F16oR+WzKtV/l2MX/cLzhRd7PKFSOy94NEck+oOM9GVyCRKHiRUxptQtw0bZEqE4Bo1IU0XOdFfk5M/G6IpLHvE5zNG55kj23vbG79mDx1lX8qGdSQ80LIjUwvLMKJe5SZb/e4bc8Gpw6bpqRpapsIP+L9UMgD4Krfcsv87dPz+hoTQl+RZcXg==\",\n        \"cipher_text\": \"gAAAAABlL2c_WUj0LWF0uPRQIHpcZR8XCjf86Lgs6JzkkJeJft4WOWzQLqbGD61LKIpYa6ty8FKQQmMWvyc99DvU6yEyGpw9MaQMYIZ0W2wLwC26xth5QZA=\",\n        \"user\": 16\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Secret",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}secret/own_secrets/36/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"own_secrets",
+								"36",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deleted 204",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}secret/own_secrets/36/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"own_secrets",
+										"36",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:10:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "a330a352fc794820be11d27ef7169aa8"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=23.710999999999594;desc=\"User CPU time\", TimerPanel_stime;dur=14.477000000000295;desc=\"System CPU time\", TimerPanel_total;dur=38.18799999999989;desc=\"Total CPU time\", TimerPanel_total_time;dur=48.79758300376125;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.744167996046599;desc=\"SQL 8 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Shared Secret",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}secret/shared_secrets/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"shared_secrets",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}secret/shared_secrets/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"shared_secrets",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:13:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "419"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "562f7c451ef540ff875c275530c1161e"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=14.990000000000059;desc=\"User CPU time\", TimerPanel_stime;dur=12.141999999999875;desc=\"System CPU time\", TimerPanel_total;dur=27.131999999999934;desc=\"Total CPU time\", TimerPanel_total_time;dur=42.63820800406393;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.9371669986867346;desc=\"SQL 3 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 18,\n        \"secret\": {\n            \"id\": 37,\n            \"name\": \"Secret\",\n            \"user\": 15\n        },\n        \"key\": \"S7ENtc1KbRCBwl4v+evtq56C7E5ndZz600uf3rmZNZa8SfjoFCI4drz7siB4+53euxcu9u1VgY6KVOVfKhl5wF8Ti5RwF0fZvp3Tzi0a01n3rH+HExHPnboDIadxEomtMblS4FFvqcq1lLP1Pm587SActpzaHBXEmA3ilQ/mWedAIem2jjxXwnPNF2XeDXf1TPqPQAQPkwaibeDaH68VGw6QdUL3/8rvVwbIVpM/tiH+ZXj8AkD8cCTFdAZllf1kk23jJgSgf+muFENELgQSt3BRaDkSeIY8TE9+XbGtwDfTn9yCwOtDQKFGIHhsuFmzox9+hnIn2DByZP/kZ2Y4Hg==\",\n        \"user\": 16\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Decrypt Shared Secrets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"secret_id\": 37,\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}secret/decrypt/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"decrypt",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"secret_id\": 37,\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/decrypt/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"decrypt",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:18:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "5d0e178554764714bcae6e48043ed48d"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=106.6470000000006;desc=\"User CPU time\", TimerPanel_stime;dur=11.974000000000373;desc=\"System CPU time\", TimerPanel_total;dur=118.62100000000098;desc=\"Total CPU time\", TimerPanel_total_time;dur=127.88662499951897;desc=\"Elapsed time\", SQLPanel_sql_time;dur=2.92162401456153;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"text\": \"This is secret content\"\n}"
+						},
+						{
+							"name": "invalid Key",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"secret_id\": 37,\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----Hi\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/decrypt/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"decrypt",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:19:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "ba4d49bbaf624dd28aa11bc0aa6f7fe2"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=20.30500000000046;desc=\"User CPU time\", TimerPanel_stime;dur=12.019999999999698;desc=\"System CPU time\", TimerPanel_total;dur=32.32500000000016;desc=\"Total CPU time\", TimerPanel_total_time;dur=31.676415994297713;desc=\"Elapsed time\", SQLPanel_sql_time;dur=1.658165994740557;desc=\"SQL 6 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \" has an invalid private Key\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Decrypt Own Secrets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRFToken",
+								"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"secret_id\": 34,\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}secret/decrypt/",
+							"host": [
+								"{{base_url}}secret"
+							],
+							"path": [
+								"decrypt",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRFToken",
+										"value": "E2RaeuPJbqHWpXOokJ6k94cuejlOrZaE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"secret_id\": 34,\n    \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCej7zHPpNiTtqD\\n4I3i3zqB1zW2Wnk7w+jzae9mmwEugAxJODgRD7oblE+fb9tR8KhrUFlqRowlg+r0\\nuGCeSLoaJOpqD/K68nez5jTtjelC39USggkUcQalc9OXPdOM7NYTPSCa54LrMS3K\\n0ObjoaTQV5+kQX2S+qAo9HUB/+SzGbAwbWlEbAmXm7hT+CYfVhzB+YV7tFu6eddn\\nG9LBlYBVMv6ZBdtuRhP/O+bO+w/rBVdP+7RCbF8inwlWs6BvFLWd7vsWFcEhsA0Q\\n6qVz8avZUB12reETvSdXHlTDoNj4H+zjWXm0wtFEpHKCB9NcRgzWncE9JAZxXeJo\\nr8N/9XYxAgMBAAECggEARTIE+A5e0zAGPDbqtG8mYTNBxWqGLYa5SkCYsPZD9b77\\nnZhjH071sMNwW+u8km2rkelmm/JdhqGjD1jHEUw7qt0hT1fWXa8ifeeggWrEuOJl\\nYcZNoBYTCHEbjYz1nTJd2dd7Ox59C5ZSnYe8uun3utQCXvQVkOa+riDATzcU3vNO\\nDlibVXxzfj/J4TTQ+uchZBaMwacy8yu3Ynf6RqjS3rfmRc2K2yjKmYy86jwUw7fh\\nh7Ubla4n7GTU/TsM9ewinD8opdkdsvecWjkMErew+1nRMs8fI555bgkilFDcssZz\\nr4rtbXyTbHLQUZhLlqByq8WVvUklE/JIjXHF/FBjYQKBgQDgMMXIcdUG10ocyO9m\\nHCb4qiEkRAnM1CTLPlS21ViPU7lWaRD9M5C2jLis7wVEwikNvYt5U4gbXzt91IsP\\nlov1sg/LisCQ+fZ47NwjSQfpminJ3PaCfeEEw/DjXArrKB2rRcVyeAA1quQEq6IP\\n2hDiQS6vwkwxFpCPvLqIQNCycwKBgQC1DyJZlt7TQC6XBdqvsDBkObdurZHiOw6P\\n3QWUqrBJ8o5OoDROpfH3Pb4+wN+IR3ehcG/FZhqjDRpZSuBdbBv4xmegpAWZdF62\\nthbm4w5jn/Bvs34QuPgpDQgzfHbp122KGecfAfOmwyg38tIPkP6W0V4nuXBWj/Dx\\nkrsgVsn3ywKBgQCzKYcGFyJdIzQRKOtYuOrUEnIF33HNhUQaQKfGrVzmvcwBqFlx\\nYAIoQPFdEm8tcdUJLA8IWJ8O8N5EQtUXEgKryS8iRLJ7qac1IGUUtcpi/1aiAbnm\\nst5exo/9wpLfNuHu/AU843WXbghnSxpqfKS9i8XZo/bry9Kfa/3N4a5mzQKBgDBQ\\naYoeiDc22TfTiBd5nHAiNqCCEHud5rTc9bBGG+SfpPm2Jj8WaQrgnvN/5CYpa/LY\\nXfr+0/zOckmBgX1sa8pmpyBmpFfehaebz2CtFhnfg/lKnEk6En5hy95xSAn+Qmyn\\nnNTZYHsPeJv1X7hnqIf2NnnDMgbnQhQ0Y1qtzhchAoGAI9bfNEG/IPXCV8zYkTwS\\njQ/qFbw+gJfPO7H1XD14+Z9r2Nbgl08MDWYJFestLaR6+ahnq3O+zi1/Pfp6/Jhi\\nj6kGmYTj6v8T1J6JNoKyOyRBJPruMpSjaUFtgwqWCeEAZB+6xIhFh4KvJKv03rSc\\n9MCRPQerT5OIvFfeqcI7r6g=\\n-----END PRIVATE KEY-----\\n\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}secret/decrypt/",
+									"host": [
+										"{{base_url}}secret"
+									],
+									"path": [
+										"decrypt",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2023 05:21:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "djdt-store-id",
+									"value": "c1b33b3abc8f44dc8dace60474fcc79b"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "TimerPanel_utime;dur=101.84800000000038;desc=\"User CPU time\", TimerPanel_stime;dur=9.426000000001267;desc=\"System CPU time\", TimerPanel_total;dur=111.27400000000165;desc=\"Total CPU time\", TimerPanel_total_time;dur=114.23495799681405;desc=\"Elapsed time\", SQLPanel_sql_time;dur=3.306917002191767;desc=\"SQL 4 queries\", CachePanel_total_time;dur=0;desc=\"Cache 0 Calls\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"text\": \"01387461613535163\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/"
+		}
+	]
+}
